@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'search_stock' , to:'stocks#search'
   get 'search_friend', to:'users#search'
   resources :users, only: [:show]
+  resources :friendships , only: [:create,:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
